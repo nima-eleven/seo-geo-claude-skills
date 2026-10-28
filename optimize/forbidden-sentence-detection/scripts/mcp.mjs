@@ -38,7 +38,7 @@ export async function startMcp() {
     pend[i] = m => { clearTimeout(to); res(m); };
     p.stdin.write(JSON.stringify({jsonrpc: '2.0', id: i, method, params}) + '\n');
   });
-  await rpc('initialize', {protocolVersion: '2025-06-18', capabilities: {}, clientInfo: {name: 'forbidden-wording-audit', version: '1'}});
+  await rpc('initialize', {protocolVersion: '2025-06-18', capabilities: {}, clientInfo: {name: 'forbidden-sentence-detection', version: '1'}});
   p.stdin.write(JSON.stringify({jsonrpc: '2.0', method: 'notifications/initialized'}) + '\n');
   const call = async (name, args) => {
     const m = await rpc('tools/call', {name, arguments: args});

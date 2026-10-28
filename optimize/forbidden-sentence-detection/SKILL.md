@@ -1,9 +1,9 @@
 ---
-name: forbidden-wording-audit
+name: forbidden-sentence-detection
 description: 'Live, page-by-page audit of a website for forbidden or avoided words and claims from a strategy, brief or house rules, done in real Chrome via Chrome DevTools MCP. Produces a hand-off package for whoever fixes the copy: an HTML report with the section and sentence of every hit, highlighted screenshots, and an Excel checklist with a Done column. Built for iGaming / social-casino sites (Win777, BitPlay, BitSpinWin, VegasGems, BitBetWin) that ban "sweepstakes", "real money", "real cash", "gambling", em dashes or "verified/official distributor" claims, but works for any site and word list. Use it whenever the user wants to find where banned words appear on a live site, screenshot them for a writer or agency to fix, or verify a wording-fix ticket went live, even if they only say "کلمات ممنوع رو تو سایت پیدا کن", "ببین کجای سایت real money نوشته" or "check the pages for banned terms".'
 ---
 
-# Forbidden-wording audit (live, Chrome DevTools MCP)
+# Forbidden Sentence Detection (live, Chrome DevTools MCP)
 
 The output is a package someone else uses to fix copy, so every finding has to be easy to find on the page. A list of counts isn't enough: each row gives the URL, the section heading above the word, the full sentence, the fix, and a screenshot with the word highlighted.
 
