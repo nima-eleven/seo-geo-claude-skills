@@ -1,0 +1,70 @@
+{
+  "name": "Win777 house rules (Q4 2026 strategy: WIN-103 and \"Rules every task follows\")",
+  "source": "Win777_Q4_Strategy, 20 Oct 2026",
+  "rules": [
+    {
+      "id": "claim",
+      "label": "Distributor / official claim",
+      "severity": "Critical",
+      "pattern": "\\b(?:(?:verified|official|trusted|authori[sz]ed|partner(?:ed)?|licensed)\\s+(?:distributor|access\\s+point|access\\s+path|path|partner|portal)s?|licensed\\s+gambling\\s+sites?)\\b",
+      "fix": "Delete the sentence or claim. The site is not a verified, official, licensed or partner distributor.",
+      "screenshot": true
+    },
+    {
+      "id": "real-money",
+      "label": "real money",
+      "severity": "High",
+      "pattern": "\\breal[\\s-]+money\\b",
+      "fix": "Remove. Rewrite without \"real money\".",
+      "slugToken": "real-money",
+      "screenshot": true
+    },
+    {
+      "id": "real-cash",
+      "label": "real cash",
+      "severity": "High",
+      "pattern": "\\breal[\\s-]+cash\\b",
+      "fix": "Remove. Rewrite without \"real cash\".",
+      "slugToken": "real-cash",
+      "screenshot": true
+    },
+    {
+      "id": "gambling",
+      "label": "gambling",
+      "severity": "High",
+      "pattern": "\\bgambl(?:ing|e|er|ers|es)\\b",
+      "fix": "Remove or rewrite (the National Council on Problem Gambling name and link may stay).",
+      "exemptContext": ["problem\\s+gambling", "ncpgambling"],
+      "slugToken": "gambl",
+      "screenshot": true
+    },
+    {
+      "id": "sweepstakes",
+      "label": "sweepstakes",
+      "severity": "High",
+      "pattern": "\\bsweepstakes?\\b",
+      "fix": "Replace with \"social casino\" or rewrite the sentence.",
+      "slugToken": "sweepstake",
+      "screenshot": true
+    },
+    {
+      "id": "ultra-panda-on-ultra-thunder",
+      "label": "Ultra Panda on Ultra Thunder page",
+      "severity": "High",
+      "pattern": "\\bultra\\s?panda\\b",
+      "onlyPaths": ["/ultra-thunder"],
+      "fix": "Remove the Ultra Panda mention: this page is about Ultra Thunder.",
+      "screenshot": true
+    },
+    {
+      "id": "em-dash",
+      "label": "em dash (—)",
+      "severity": "Low",
+      "pattern": "—",
+      "fix": "Replace the em dash with a comma, colon or full stop.",
+      "screenshot": false
+    }
+  ],
+  "slugExemptFields": ["<title>", "meta description", "H1"],
+  "slugExemptNote": "The plan keeps the title, meta and H1 on pages whose slug contains the avoided word."
+}
